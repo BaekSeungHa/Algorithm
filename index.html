@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Click Test</title>
+    <script>
+      var btns = [
+        document.getElementById("btn0"),
+        document.getElementById("btn1"),
+        document.getElementById("btn2"),
+      ];
+
+      function setClick() {
+        for (var i = 0; i < 3; i++) {
+          btns[i].onclick = function () {
+            console.log(i);
+          };
+        }
+      }
+      console.log(setClick());
+    </script>
+  </head>
+  <body>
+    <button id="btn0">Button 0</button>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+  </body>
+</html>
